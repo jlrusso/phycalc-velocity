@@ -939,6 +939,7 @@ button.accordion.active:after {
     transition: max-height 0.4s ease-out;
 }
 .modal-panel img {
+	display: block;
   width: 70%;
   height: 50%;
   margin: auto;
@@ -1110,6 +1111,9 @@ button.accordion.active:after {
 	color: var(--main-yellow-color);
 	padding: 10px 15px;
 	font-size: 1.5rem;
+}
+#go-up-container button:focus {
+	outline: none;
 }
 /*--- End of Top of Page Btn ---*/
 
@@ -1388,6 +1392,9 @@ button.accordion.active:after {
 	.module-front,
 	.module-back {
 		font-size: 1.5rem;
+	}
+	.modal-panel img {
+		width: 100%;
 	}
 }
 @media screen and (max-width: 385px){
