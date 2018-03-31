@@ -121,11 +121,14 @@ nav {
 	margin: auto;
 }
 #search-bar {
+	position: relative;
 	width: 100%;
-	background-color: #333;
+	background-color: transparent;
 	color: #F1C40F;
 	border: 1px solid #F1C40F;
-	border-radius: 3px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
 	padding: 5px 10px 5px 40px;
 	font-size: 2rem;
 	z-index: 2 !important;
@@ -134,20 +137,25 @@ nav {
 #search-bar:focus {
 	outline: none !important;
 }
-#search-btn {
-	background-color: #333;
-	padding: 8px 10px 4px;
+#search-icon {
+	background-color: transparent;
+	padding: 8px 10px 5px;
 	color: #F1C40F;
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	position: absolute;
 	border: 0;
 	border-radius: 4px;
-	top: 1px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	top: 50%;
 	left: 1px;
-	z-index: 0;
+	transform:translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	z-index: 1;
 }
-
-
 #close-search-btn {
 	width: 45px;
 	height: 45px;
@@ -416,45 +424,15 @@ a.next-page:hover .glyphicon-chevron-right {
 }
 /*---Radio Btns In Panel Header ---*/
 .unit-selection,
-.unit-selection2,
 .time-selection,
-.time-selection2,
-.solve-selection,
-.solve-selection2 {
+.solve-selection{
   background: #333 !important;
   color: #F1C40F !important;
   font-weight: normal !important;
   border-radius: 5px;
-}
-
-.solve-selection,
-.unit-selection,
-.time-selection {
   padding: 10px 10px 6px;
   margin-bottom: 5px;
   vertical-align: middle;
-}
-
-.solve-selection2,
-.unit-selection2,
-.time-selection2 {
-	display: none;
-	padding: 5px 8px 5px;
-	margin-bottom: 5px;
-	vertical-align: middle;
-}
-
-#solve-selector,
-#unit-selector,
-#time-selector {
-	display: none;
-	width: 90%;
-	max-width: 430px;
-	background-color: var(--main-black-color);
-	border: 1.5px solid var(--main-yellow-color);
-	border-radius: 4px;
-	padding: 5px 10px;
-	margin-left: 10px;
 }
 /*--- BADGES ---*/
   .badge {
@@ -473,6 +451,9 @@ a.next-page:hover .glyphicon-chevron-right {
   .radio-btn input {
     display:none;
   }
+	.radio-btn:last-child {
+		margin-right: 5px;
+	}
 	.checkmark {
 	    border-radius: 4px;
 	    padding: 4px 10px;
@@ -1093,6 +1074,13 @@ button.accordion.active:after {
 
 
 @media screen and (max-width: 1200px){
+	.solve-selection,
+	.unit-selection,
+	.time-selection {
+		width: auto;
+		white-space: nowrap;
+		overflow-x: scroll !important;
+	}
 	.form-control {
 		padding: 17px 10px;
 	}
@@ -1259,9 +1247,6 @@ button.accordion.active:after {
 		margin: 0 auto 10px;
 		font-size: 1.7rem;
 	}
-	.checkmark {
-		font-size: 14px;
-	}
 	#conversion-container {
 		width: 95.5%;
 		margin: auto;
@@ -1317,30 +1302,8 @@ button.accordion.active:after {
 		width:100px;
 		padding:8px;
 	}
-	.solve-selection,
-	.unit-selection,
-	.time-selection {
-		display: none;
-	}
-
-	.solve-selection2,
-	.unit-selection2,
-	.time-selection2 {
-		display: block;
-	}
-
-	#solve-selector,
-	#unit-selector,
-	#time-selector {
-		display: inline-block;
-	}
 }
 @media screen and (max-width: 450px){
-	#solve-selector,
-	#unit-selector,
-	#time-selector {
-		margin-left: 5px;
-	}
 	#outer-image-container,
 	#solo-image img {
 		height: 100px;
