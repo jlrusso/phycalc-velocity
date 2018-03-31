@@ -2,6 +2,39 @@ $(window).on('beforeunload', function() {
    $(window).scrollTop(0);
 });
 
+$(document).ready(function(){
+  $("#conversion-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#conversion-container").offset().top
+    }, "slow")
+  });
+
+  $("#vert-conversion-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#conversion-container").offset().top
+    }, "slow")
+  });
+
+  $("#examples-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#practice-btns-container").offset().top
+    }, "slow")
+  });
+
+  $("#vert-examples-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: $("#practice-btns-container").offset().top
+    }, "slow")
+  });
+
+  $("#go-up-btn").click(function(){
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow")
+  });
+
+})
+
 var horizontalSearchBtn = document.getElementById("horizontal-search-btn"),
 verticalSearchBtn = document.getElementById("vertical-search-btn"),
 searchContainer = document.getElementById("search-container"),
@@ -119,91 +152,7 @@ var solveBtns = document.getElementsByClassName("solve-btns"),
 function reseTrigAndUnitSelectors(){
 	currentSlideIndex = 0;
 	switchToSlide();
-	$("#solve-selector").prop("selectedIndex", 0);
-	$("#unit-selector").prop("selectedIndex", 0);
 }
-
-/*--- Bind Solve Selector Options with Solve For Radio Btns ---*/
-$("#solve-selector").change(function(){
-	switch(true){
-		case $("#velocity-option").is(":selected"):
-			solveVelocityBtn.click();
-		break;
-		case $("#displacement-option").is(":selected"):
-			solveDisplacementBtn.click();
-		break;
-		case $("#time-option").is(":selected"):
-			solveTimeIntervalBtn.click();
-		break;
-	}
-})
-
-$("#unit-selector").change(function(){
-	switch(true){
-		case $("#meter-option").is(":selected"):
-			meterBtn.click();
-		break;
-		case $("#kilometer-option").is(":selected"):
-			kilometerBtn.click();
-		break;
-		case $("#feet-option").is(":selected"):
-			feetBtn.click();
-		break;
-		case $("#mile-option").is(":selected"):
-			mileBtn.click();
-		break;
-	}
-})
-
-$("#time-selector").change(function(){
-	switch(true){
-		case $("#seconds-option").is(":selected"):
-			secBtn.click();
-		break;
-		case $("#minutes-option").is(":selected"):
-			minBtn.click();
-		break;
-		case $("#hours-option").is(":selected"):
-			hourBtn.click();
-		break;
-		case $("#days-option").is(":selected"):
-			dayBtn.click();
-		break;
-	}
-})
-
-	$(document).ready(function(){
-		$("#conversion-btn").click(function(){
-			$("html, body").animate({
-				scrollTop: $("#conversion-container").offset().top
-			}, "slow")
-		});
-
-		$("#vert-conversion-btn").click(function(){
-			$("html, body").animate({
-				scrollTop: $("#conversion-container").offset().top
-			}, "slow")
-		});
-
-		$("#examples-btn").click(function(){
-			$("html, body").animate({
-				scrollTop: $("#practice-btns-container").offset().top
-			}, "slow")
-		});
-
-		$("#vert-examples-btn").click(function(){
-			$("html, body").animate({
-				scrollTop: $("#practice-btns-container").offset().top
-			}, "slow")
-		});
-
-		$("#go-up-btn").click(function(){
-			$("html, body").animate({
-				scrollTop: 0
-			}, "slow")
-		});
-
-	})
 
 	window.addEventListener("resize", function(){
 		if(window.innerWidth < 992){
@@ -446,21 +395,20 @@ function clearPartOne(){
 
 
 /*--- Open and Close Accordion Panels in the Modal ---*/
-var acc = document.getElementsByClassName("accordion");
-for(var i = 0; i < acc.length; i++){
-	acc[i].addEventListener("click", openClosePanel);
+var accordions = document.getElementsByClassName("accordion");
+for(var i = 0; i < accordions.length; i++){
+	accordions[i].addEventListener("click", function(e){
+    e.preventDefault();
+  	this.classList.toggle("active");
+  	var innerPanel = this.nextElementSibling;
+  	if(innerPanel.style.maxHeight){
+  		innerPanel.style.maxHeight = null;
+  	} else {
+  		innerPanel.style.maxHeight = innerPanel.scrollHeight + "px";
+  	}
+  })
 }
 
-function openClosePanel(e){
-	e.preventDefault();
-	this.classList.toggle("active");
-	var panel = this.nextElementSibling;
-	if(panel.style.maxHeight){
-		panel.style.maxHeight = null;
-	} else {
-		panel.style.maxHeight = panel.scrollHeight + "px";
-	}
-}
 /*--- END OF ABOVE ---*/
 
 /*--- Close all accordion panels on "X" btn click or Modal Window click ---*/
