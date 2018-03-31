@@ -434,6 +434,15 @@ $(".example-modal").click(function(e){
 })
 /*--- End of Closing all Accordion and Panels ---*/
 
+/*--- Close Modals ---*/
+var closeModalBtns = document.querySelectorAll(".close-modal-btn");
+closeModalBtns.forEach(function(btn){
+  btn.addEventListener("click", function(){
+    var $modalParent = $(this).parents(".modal");
+    $modalParent.click();
+  })
+})
+
 /*--- Toggle Img Caption Show/Hide ---*/
 var imgCaptions = document.getElementsByClassName("img-caption");
 var thirdPageImgs = document.querySelectorAll(".third-page-pics > img");
