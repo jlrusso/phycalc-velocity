@@ -706,6 +706,9 @@ input[type="radio"] {
 	background-color: var(--main-yellow-color);
 	color: var(--main-black-color);
 }
+.slide-arrow-btn .glyphicon {
+	padding-top: 3px;
+}
 #prev-slide-btn {
   position: absolute;
   top: 0;
