@@ -298,9 +298,9 @@ function solveForFunction(){
 			partOneInputFields[i].classList.remove("yellow-outline");
 		}
 	}
-	velocityFieldOne.placeholder = "Velocity";
-	displacementFieldOne.placeholder = "Displacement";
-	timeIntervalFieldOne.placeholder = "Time Interval";
+	velocityFieldOne.placeholder = "velocity";
+	displacementFieldOne.placeholder = "displacement" + " (\u0394x)";
+	timeIntervalFieldOne.placeholder = "time interval" + " (\u0394t)";
 
 	switch(true){
 		case (solveVelocityBtn.checked):
@@ -395,9 +395,9 @@ function clearPartOne(){
 			partOneInputFields[i].classList.remove("yellow-outline");
 		}
 	}
-	velocityFieldOne.placeholder = "Velocity";
-	displacementFieldOne.placeholder = "Displacement";
-	timeIntervalFieldOne.placeholder = "Time Interval";
+  velocityFieldOne.placeholder = "velocity";
+	displacementFieldOne.placeholder = "displacement" + " (\u0394x)";
+	timeIntervalFieldOne.placeholder = "time interval" + " (\u0394t)";
 	currentSlideIndex = 0;
 	switchToSlide()
 }
