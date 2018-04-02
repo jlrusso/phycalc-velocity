@@ -42,15 +42,15 @@
 										<span><b>Solve:&nbsp;</b></span>
 										<label class="radio-btn">
 										 	<input type="radio" class="solve-btns" id="solve-velocity-radio-btn" name="radio-one">
-										    <span class="checkmark">Velocity</span> |
+										    <span class="checkmark">velocity</span> |
 										</label>
 										<label class="radio-btn">
 										    <input type="radio" class="solve-btns" name="radio-one" id="solve-displacement-radio-btn">
-										    <span class="checkmark">Displacement</span> |
+										    <span class="checkmark">displacement</span> |
 										</label>
 										<label class="radio-btn">
 										    <input type="radio" class="solve-btns" name="radio-one" id="solve-time-interval-radio-btn">
-										    <span class="checkmark">Time Interval</span>
+										    <span class="checkmark">time interval</span>
 										</label>
 									</form>
 								</div>
@@ -105,9 +105,9 @@
 								<div class="col-md-4">
 									<h4 class="text-center"><span class="badge">4</span> <strong>Values</strong></h4>
 									<form class="form-group">
-									<input class="form-control part-one-fields" type="number" id="velocity-field-one" placeholder="Velocity">
-									<input class="form-control part-one-fields" type="number" name="displacement" id="displacement-field-one" placeholder="Displacement">
-									<input class="form-control part-one-fields" type="number" name="time-interval" id="time-interval-field-one" placeholder="Time Interval">
+									<input class="form-control part-one-fields" type="number" id="velocity-field-one" placeholder="velocity">
+									<input class="form-control part-one-fields" type="number" name="displacement" id="displacement-field-one" placeholder="displacement (&Delta;x)">
+									<input class="form-control part-one-fields" type="number" name="time-interval" id="time-interval-field-one" placeholder="time interval (&Delta;t)">
 									<input class="form-control part-one-fields" type="number" id="sig-figs-field" placeholder="# of sig-figs (optional)">
 									<div class="form-divider"></div>
 									<div class="calc-and-clear">
