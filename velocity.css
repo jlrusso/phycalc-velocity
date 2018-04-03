@@ -776,7 +776,13 @@ input[type="radio"] {
   border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-  box-shadow: 0 0 5px var(--main-black-color);
+	transition: 0.2s;
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-o-transition: 0.2s;
+}
+.third-page-pics:hover img {
+	box-shadow: 0 0 5px var(--main-black-color);
 	-webkit-box-shadow: 0 0 5px var(--main-black-color);
 	-moz-box-shadow: 0 0 5px var(--main-black-color);
 }
@@ -784,7 +790,7 @@ input[type="radio"] {
   width: 85%;
   height: auto;
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
@@ -920,7 +926,7 @@ input[type="radio"] {
     border: 2px solid var(--main-black-color);
     color: var(--main-black-color);
     background-color: transparent;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 		font-weight: bold;
     outline: none;
   }
