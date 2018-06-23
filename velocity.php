@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PhyCalc | Velocity</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="description" content="Here, we cover the differences between speed and velocity and enable you to solve your own practice problems">
+	<title>IP | Velocity</title>
+	<link rel="shortcut icon" href="/img/ip-logo.ico" type="image/ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
@@ -14,7 +16,7 @@
 <body>
 
 	<?php
-		include_once "navSearch.php";
+		include_once "nav-template.php";
 	?>
 
 	<section id="main-content">
@@ -24,8 +26,8 @@
 					<h2 class="animated bounceInDown section-heading">Velocity</h2>
 					<div class="pages-nav" id="top-pager">
 						<ul class="pager">
-							<li><a href="vectorDisplacement.php" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
-							<li><a href="acceleration.php" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+							<li><a href="/2d-displacement" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
+							<li><a href="/acceleration" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -123,9 +125,9 @@
 									</div>
 									<div id="outer-image-container">
 										<div id="inner-image-container">
-											<img src="../img/newVelocityEquation.png" class="img-responsive slide" alt="Velocity Equation"/>
-											<img src="../img/newDisplacementEquation.png" class="img-responsive slide" alt="Displacement Equation"/>
-											<img src="../img/newTimeIntervalEquation.png" class="img-responsive slide" alt="Time Interval Equation"/>
+											<img src="../img/newVelocityEquation.PNG" class="img-responsive slide" alt="Velocity Equation"/>
+											<img src="../img/newDisplacementEquation.PNG" class="img-responsive slide" alt="Displacement Equation"/>
+											<img src="../img/newTimeIntervalEquation.PNG" class="img-responsive slide" alt="Time Interval Equation"/>
 										</div>
 										<div id="slide-bar-indicators">
 											<div class="slide-bar"></div>
@@ -134,7 +136,7 @@
 										</div>
 									</div>
 									<div id="solo-image">
-										<img src="../img/newVelocityFrames.png" class="img-responsive" alt="Velocity Frames"/>
+										<img src="../img/newVelocityFrames.PNG" class="img-responsive" alt="Velocity Frames"/>
 									</div>
 								</div>
 							</div>
@@ -180,7 +182,7 @@
 								</div>
 							</div>
 							<div class="module-img">
-								<img src="../img/positionVTimeGraph.png" class="img-responsive" alt="Position v. Time Graph">
+								<img src="../img/positionVTimeGraph.PNG" class="img-responsive" alt="Position v. Time Graph">
 							</div>
 						</div>
 					</div>
@@ -234,10 +236,6 @@
                       A typical bowling ball that ois released in a straight line can reach up to 21 mph while traveling from x1 = 1.8 meters to x2 = 7.8 meters. How much time does it take for it to travel that distance?(1 mph = 0.447 m/s)
                   </p>
               </div>
-              <button class="accordion"><strong>Illustration</strong></button>
-              <div class="modal-panel">
-                  <img src="img/velocityAccordionImg1.png" alt="Bowling"/>
-              </div>
               <button class="accordion"><strong>Given Variables</strong></button>
               <div class="modal-panel">
                   <p>
@@ -248,6 +246,10 @@
                           <li><b>Velocity</b> : 21 mph (1 mph = 0.447 m/s)</li>
                       </ul>
                   </p>
+              </div>
+							<button class="accordion"><strong>Illustration</strong></button>
+              <div class="modal-panel">
+                  <img src="img/velocityAccordionImg1.PNG" alt="Bowling"/>
               </div>
               <button class="accordion last-accordion"><strong>Solution</strong></button>
               <div class="modal-panel">
@@ -282,10 +284,6 @@
 									A guard dog walks 130 meters in one trip around the perimeter of a building. If it takes him 230 seconds to make this trip. What was his speed in that one trip?
 								</p>
 							</div>
-							<button class="accordion"><strong>Illustration</strong></button>
-							<div class="modal-panel">
-								<img src="img/velocityAccordionImg2.png" alt="Perimeter"/>
-							</div>
 							<button class="accordion"><strong>Given Variables</strong></button>
 							<div class="modal-panel">
 								<p>
@@ -295,6 +293,10 @@
 										<li><b>Time interval</b> : 230 seconds</li>
 									</ul>
 								</p>
+							</div>
+							<button class="accordion"><strong>Illustration</strong></button>
+							<div class="modal-panel">
+								<img src="img/velocityAccordionImg2.PNG" alt="Perimeter"/>
 							</div>
 							<button class="accordion last-accordion"><strong>Solution</strong></button>
 							<div class="modal-panel">
@@ -330,10 +332,6 @@
 									A ball that is thrown in a straight line with a velocity of 80 mph goes from x<sub>i</sub> = 1.5 m to x<sub>f</sub> = 34 m. How much time does this ball take to travel that distance?
 								</p>
 							</div>
-							<button class="accordion"><strong>Illustration</strong></button>
-							<div class="modal-panel">
-								<img src="img/velocityAccordionImg3.png" alt="Ball Thrown"/>
-							</div>
 							<button class="accordion"><strong>Given Variables</strong></button>
 							<div class="modal-panel">
 								<p>
@@ -344,6 +342,10 @@
 										<li><b>Velocity</b> : 80 mph</li>
 									</ul>
 								</p>
+							</div>
+							<button class="accordion"><strong>Illustration</strong></button>
+							<div class="modal-panel">
+								<img src="img/velocityAccordionImg3.PNG" alt="Ball Thrown"/>
 							</div>
 							<button class="accordion last-accordion"><strong>Solution</strong></button>
 							<div class="modal-panel">
@@ -395,8 +397,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<ul class="pager">
-						<li><a href="vectorDisplacement.php" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
-						<li><a href="acceleration.php" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+						<li><a href="/2d-displacement" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
+						<li><a href="/acceleration" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
 					</ul>
 				</div>
 			</div>
