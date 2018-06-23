@@ -26,8 +26,8 @@
 					<h2 class="animated bounceInDown section-heading">Velocity</h2>
 					<div class="pages-nav" id="top-pager">
 						<ul class="pager">
-							<li><a href="/2d-displacement" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
-							<li><a href="/acceleration" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+							<li><a href="vectorDisplacement.php" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
+							<li><a href="acceleration.php" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -397,8 +397,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<ul class="pager">
-						<li><a href="/2d-displacement" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
-						<li><a href="/acceleration" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+						<li><a href="vectorDisplacement.php" class="prev-page-btn"><span class="glyphicon glyphicon-chevron-left"></span>Previous: 2D Displacement</a></li>
+						<li><a href="acceleration.php" class="next-page-btn">Next: Acceleration<span class="glyphicon glyphicon-chevron-right"></span></a></li>
 					</ul>
 				</div>
 			</div>
