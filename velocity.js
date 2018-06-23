@@ -148,11 +148,11 @@ var secondUnits = document.getElementsByClassName("second-units"),
 	hourBtn = document.getElementById("hour-radio-btn"),
 	dayBtn = document.getElementById("day-radio-btn");
 
-var partOneInputFields = document.getElementsByClassName("part-one-fields");
+var partOneInputFields = document.getElementsByClassName("part-one-fields"),
 	velocityFieldOne = document.getElementById("velocity-field-one"),
 	timeIntervalFieldOne = document.getElementById("time-interval-field-one"),
 	displacementFieldOne = document.getElementById("displacement-field-one"),
-	sigFigField = document.getElementById("sig-figs-field");
+	sigFigsField = document.getElementById("sig-figs-field");
 
 var solveBtns = document.getElementsByClassName("solve-btns"),
 	solveVelocityBtn = document.getElementById("solve-velocity-radio-btn"),
@@ -338,27 +338,27 @@ function calculatePartOne(){
 			velocityFieldOne.type = "text";
 			let tempVelocityValue = (displacementFieldOne.value / timeIntervalFieldOne.value);
 			if(tempVelocityValue.toString().length > 5){
-				velocityFieldOne.value = tempVelocityValue.toPrecision(sigFigField.value || 5) + " " + chosenDispUnit + "/" + chosenTimeUnit;
+				velocityFieldOne.value = tempVelocityValue.toPrecision(sigFigsField.value || 5) + " " + chosenDispUnit + "/" + chosenTimeUnit;
 			} else {
-				velocityFieldOne.value = tempVelocityValue.toPrecision(sigFigField.value || undefined) + " " + chosenDispUnit + "/" + chosenTimeUnit;
+				velocityFieldOne.value = tempVelocityValue.toPrecision(sigFigsField.value || tempVelocityValue.toString().length) + " " + chosenDispUnit + "/" + chosenTimeUnit;
 			}
 		break;
 		case (solveDisplacementBtn.checked):
 			displacementFieldOne.type = "text"
 			let tempDispValue = (velocityFieldOne.value * timeIntervalFieldOne.value);
 			if(tempDispValue.toString().length > 5){
-				displacementFieldOne.value = tempDispValue.toPrecision(sigFigField.value || 5) + " " + chosenDispUnit;
+				displacementFieldOne.value = tempDispValue.toPrecision(sigFigsField.value || 5) + " " + chosenDispUnit;
 			} else {
-				displacementFieldOne.value = tempDispValue.toPrecision(sigFigField.value || undefined) + " " + chosenDispUnit;
+				displacementFieldOne.value = tempDispValue.toPrecision(sigFigsField.value || tempDispValue.toString().length) + " " + chosenDispUnit;
 			}
 		break;
 		case (solveTimeIntervalBtn.checked):
 			timeIntervalFieldOne.type = "text";
 			let tempTimeValue = (displacementFieldOne.value / velocityFieldOne.value);
 			if(tempTimeValue.toString().length > 5){
-				timeIntervalFieldOne.value = tempTimeValue.toPrecision(sigFigField.value || 5) + " " + chosenTimeUnit;
+				timeIntervalFieldOne.value = tempTimeValue.toPrecision(sigFigsField.value || 5) + " " + chosenTimeUnit;
 			} else {
-				timeIntervalFieldOne.value = tempTimeValue.toPrecision(sigFigField.value || undefined) + " " + chosenTimeUnit;
+				timeIntervalFieldOne.value = tempTimeValue.toPrecision(sigFigsField.value || tempTimeValue.toString().length) + " " + chosenTimeUnit;
 			}
 		break;
 		default:
